@@ -1,4 +1,4 @@
-#Text Classification
+# Text Classification
 This project investigates the utility of different
 learning algorithms for a text classification task. 
 The project uses the implementations available in the 
@@ -15,24 +15,24 @@ configurations:
 - My best configuration (MBC) - Uses the best configuration 
   of the used classifiers (the configurations that have the 
   best evaluation scores).
-###Used Classifiers
+### Used Classifiers
 - Naive Bayes
 - Logistic Regression  
 - Support Vector Machines 
 - Random Forests
 
-##Provided Data Set 
+## Provided Data Set 
 The “20 newsgroup dataset” is provided in the project, which 
 contains 20,000 newsgroup documents partitioned into 20 news 
 categories. We treat each of the categories as classes.
 In each class, there two sets of documents, one for training and one for test.
 
-##Basic Comparison with Baselines
+## Basic Comparison with Baselines
 
 - For all four methods (Naive Bayes, Logistic Regression, Support Vector Machines, and Random Forests), 
   Basic Comparison runs both unigram and bigram baselines.
   
-###To Run:
+### To Run:
 ```bash
 python UB_BB.py <trainset> <evalset> <output> <display LC>
 ```
@@ -50,28 +50,28 @@ and "evalset" should be ‘Evaluation’.
   "Classification Method", "Configuration", "Macro-Precision", "Macro-Recall", "F1-score", evaluated on 
   the evaluation data.
 
-##My Best Configuration
+## My Best Configuration
 After observing the performances of the basic versions of the all four classification methods,
 I added some improvements for each classification method to increase their accuracy,
 precision and f1 scores.
-###Naive Bayes Design Choices 
+### Naive Bayes Design Choices 
 - Used Count Vectorizer to improve evaluation scores on test data
 - Added feature selection using Select From Model method
 - Used stemming, ignoring stop words and lower casing words
-###Logistic Regression Design Choices
+### Logistic Regression Design Choices
 - Used Count Vectorizer to improve evaluation scores on test data
 - Added feature selection using Select From Model method
 - Used stemming, ignoring stop words and lower casing words
-###Support Vector Machines Design Choices
+### Support Vector Machines Design Choices
 - Used TFIDF to improve evaluation scores on test data
 - Added feature selection using Select From Model method
 - Used stemming, ignoring stop words and lower casing words
-###Random Forests Design Choices
+### Random Forests Design Choices
 - Used TFIDF to improve evaluation scores on test data  
 - Added feature selection using Select From Model method
 - Used stemming, ignoring stop words and lower casing words
 
-###To Run
+### To Run
 ```bash
 python MBC_exploration.py <trainset> <evalset> <output>
 ```
@@ -82,10 +82,10 @@ python MBC_exploration.py <trainset> <evalset> <output>
 - where "Classification Method" is  one of {NB, LR, SVM, RF}. The content of the output file for the NewsGroup 
   Dataset is included in the Report.pdf file.
 
-##My Best Configuration Final
+## My Best Configuration Final
 Improved Naive Bayes gave me the highest evaluation scores,
 which is why I provided it as my final MBC.
-###To Run
+### To Run
 ```bash
 python MBC_final.py <trainset> <testset> <output>
 ```
